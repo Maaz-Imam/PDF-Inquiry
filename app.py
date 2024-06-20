@@ -3,7 +3,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from src.key import GOOGLE_API_KEY
 
 # Initialize the model with your API key
-llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=GOOGLE_API_KEY)
+llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key = st.secrets["GOOGLE_API_KEY"])
 
 def chat(input_text):
     # Invoke the model with user input
